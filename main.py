@@ -7,7 +7,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
 from PyQt6.QtCore import Qt
 
 
-class Espresso(QMainWindow):
+class Cappuccino(QMainWindow):
     def __init__(self):
         super().__init__()
         f = io.StringIO(open('main.ui').read())
@@ -105,6 +105,6 @@ if __name__ == '__main__':
     con = sqlite3.connect("coffee.sqlite")
     cur = con.cursor()
     app = QApplication(sys.argv)
-    ex = Espresso()
+    ex = Cappuccino()
     ex.show()
     sys.exit(app.exec())
