@@ -52,6 +52,9 @@ class Espresso(QMainWindow):
             form = AddEditForm([i for i in result])
             form.show()
             edit_forms.append(form)
+    
+    def closeEvent(self, f):
+        app.closeAllWindows()
 
 
 class AddEditForm(QMainWindow):
